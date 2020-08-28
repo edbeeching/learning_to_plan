@@ -3,25 +3,26 @@
 This repository contains code for paper [Learning to Plan with Uncertain Topological Maps]( https://arxiv.org/abs/2007.05270) ECCV 2020 (Spotlight)
 
 # Contents
-* [Requirements]
-* [Dataset]
-* [Training]
-* [Pretrained model]
-* [Citation]
+* Requirements
+* Dataset
+* Training
+* Pretrained model
+* Citation
 
-
-
-# Requirements:
+## Requirements:
 pip install -R requirements.txt
 
-# Dataset (TODO)
-Download the dataset from the following site (TODO) , note it is 15GB in size.
-mkdir data 
-cd data
-wget xxxx.gz 
+## Dataset 
+The dataset is make available on Zenodo https://zenodo.org/record/4003445
+The dataset is 4.8 GB in size
 
+```
+mkdir data && cd data
+wget -O graph_data3_distance_weights.gz  https://zenodo.org/record/4003445/files/file.data?download=1 
+tar -xvzf graph_data3_distance_weights.gz
 
-# Training
+```
+## Training
 
 Please use the following hyperparameters for training:
 
@@ -30,10 +31,10 @@ python train.py --data_path data/graph_data3_distance_weights/train --hidden_siz
 
 ```
 
-# Pretrained model
+## Pretrained model
 The pretrained model can be found in models/best_model.pth
 
-# Citation
+## Citation
 
 If you find this useful, consider citing the following:
 ```
